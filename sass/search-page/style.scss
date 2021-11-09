@@ -1,0 +1,137 @@
+@import "../abstracts/fonts";
+@import "../abstracts/variables";
+@import "../abstracts/reboot";
+@import "../abstracts/mixins";
+
+body {
+  background-color: $baseBackgroundColor;
+  color: invert($baseBackgroundColor);
+
+  padding-bottom: 300px;
+  overflow-x: hidden;
+}
+
+header#header {
+  height: 60px;
+  background-color: $headerBackgroundColor;
+
+  .search-container {
+    height: 40px;
+    background-color: #333147;
+    align-items: center;
+    padding: 0 10px;
+    margin: 0 15px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .search-icon {
+      cursor: pointer;
+    }
+
+    input {
+      background-color: transparent;
+      height: 100%;
+      padding-left: 15px;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .header-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include textGradient(120deg, #b2afd7, #a2a0c836);
+  }
+
+  .profile-area {
+    position: relative;
+
+    .profile {
+      $radius: 45px;
+      width: $radius;
+      height: $radius;
+      background-color: darken($headerBackgroundColor, 5%);
+      overflow: hidden;
+      position: relative;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .profile-dropdown {
+      width: 200px;
+      height: auto;
+      background-color: darken(#201f2d, 5%);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translate(-100%, 100%);
+      z-index: 5;
+      border-radius: 5px;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease-out;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .profile-dropdown-item {
+        transition: background-color 0.3s ease-out;
+        &:hover {
+          background-color: darken(#201f2d, 2%);
+        }
+      }
+    }
+  }
+}
+
+main#main {
+  .result-item {
+    width: 100%;
+    height: 240px;
+    background-color: #242332;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+
+    .image {
+      width: 200px;
+      height: 200px;
+      flex: 0 0 200px;
+      background-color: yellow;
+      border-radius: 10px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .result-text {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (max-width: 1000px) {
+      height: auto;
+      .image {
+        width: 100%;
+        flex: 0 0 100%;
+      }
+      .texts {
+        width: 100%;
+      }
+      .result-title {
+        text-align: center;
+      }
+      .result-text {
+        text-align: center;
+      }
+    }
+  }
+}
