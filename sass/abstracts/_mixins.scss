@@ -1,5 +1,0 @@
-@mixin textGradient($angle: 120deg, $colors...) {
-  background: linear-gradient($angle, $colors);
-  color: transparent;
-  -webkit-background-clip: text;
-}
