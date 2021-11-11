@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: #333147;
+  color: #ccceb8;
+  padding-bottom: 300px;
+  overflow-x: hidden;
+  font-family: "Poppins", "Roboto", "QuickSand", "Open Sans", "Segoe UI", "Tahoma", sans-serif;
+}
+
+main#main section.info .image {
+  width: 250px;
+  height: 350px;
+  flex: 0 0 250px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+main#main section.info .image:hover .favorite-container {
+  transform: translateY(10px);
+}
+main#main section.info .image img {
+  width: 100%;
+  height: 100%;
+}
+main#main section.info .image .favorite-container {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  transform: translateY(-100%);
+  transition: transform 0.15s ease-out;
+}
+main#main section.info .image .favorite-container .favorite-icon {
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
+}
+main#main section.info .image .favorite-container .favorite-icon.active {
+  color: #ff004c;
+}
+main#main section.info .movie-text {
+  height: 235px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main#main section.info .properties .property-item {
+  justify-content: center;
+  align-items: center;
+}
+main#main section.info .properties .property-item .property-key {
+  color: #aeabc8;
+}
+main#main section.info .properties .property-item .property-value {
+  color: #dadada;
+}
+main#main section.info .properties .property-item:not(:first-child) {
+  border-left: 1px solid #4b4a62;
+  padding-left: 20px;
+}
+main#main section.video-area {
+  width: 100%;
+}
+main#main section.video-area iframe {
+  width: 50vw;
+  height: 40vw;
+  max-width: 600px;
+  max-height: 400px;
+  min-width: 300px;
+  min-height: 200px;
+}
+@media (max-width: 768px) {
+  main#main section.video-area iframe {
+    width: 100% !important;
+    height: 45vw;
+  }
+}
+main#main section.comments {
+  width: 100%;
+  height: 200px;
+}
+main#main section.comments .message-area {
+  width: 100%;
+}
+main#main section.comments .message-area .profile {
+  width: 60px;
+  height: 60px;
+  flex: 0 0 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main#main section.comments .message-area .profile img {
+  width: 100%;
+  height: 100%;
+}
+main#main section.comments .message-area .message-input {
+  width: 60%;
+  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  margin-top: 30px;
+  padding: 10px 0 0 10px;
+  border-radius: 0 10px 10px 10px;
+  background-color: #262439;
+  border: none;
+  outline: none;
+}
+@media (max-width: 600px) {
+  main#main section.comments .message-area .message-input {
+    width: 100%;
+  }
+}
+main#main section.comments .comment-item .profile {
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main#main section.comments .comment-item .profile img {
+  width: 100%;
+  height: 100%;
+}
+main#main section.comments .comment-item .comment-container {
+  width: 70%;
+  height: auto;
+  background-color: #262439;
+  margin: 25px 0 0 10px;
+  padding: 10px;
+  border-radius: 0 10px 10px 10px;
+  position: relative;
+}
+main#main section.comments .comment-item .comment-container .actions-container {
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  transform: translateY(100%);
+}
+main#main section.comments .comment-item .comment-container .actions-container .like-count {
+  margin: 0 10px;
+  color: #00ffa3;
+}
+main#main section.comments .comment-item .comment-container .actions-container .hand-icon {
+  font-size: 0.85em;
+  cursor: pointer;
+}
+main#main section.comments .comment-item .comment-container .actions-container .hand-icon.dislike {
+  color: #ff005c;
+  opacity: 0.5;
+}
+main#main section.comments .comment-item .comment-container .actions-container .hand-icon.like {
+  color: #00ffa3;
+}
+
+/*# sourceMappingURL=style.css.map */

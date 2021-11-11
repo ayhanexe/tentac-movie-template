@@ -1,0 +1,29 @@
+@import "../abstracts/fonts";
+@import "../abstracts/variables";
+@import "../abstracts/reboot";
+@import "../abstracts/mixins";
+
+main#main {
+  section.watchlist {
+    .watchlist-item {
+      width: 90%;
+      height: 250px;
+      background-color: #1d1c29;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 10px;
+      cursor:pointer;
+      .poster {
+        width: 150px;
+        height: 100%;
+        border-radius: 10px;
+      }
+      .watchlist-item-text {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-overflow: hidden;
+      }
+    }
+  }
+}

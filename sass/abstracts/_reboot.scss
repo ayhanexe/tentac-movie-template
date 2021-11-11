@@ -1,0 +1,16 @@
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: $baseBackgroundColor;
+  color: invert($baseBackgroundColor);
+
+  padding-bottom: 300px;
+  overflow-x: hidden;
+
+  font-family: "Poppins", "Roboto", "QuickSand", "Open Sans", "Segoe UI",
+    "Tahoma", sans-serif;
+}

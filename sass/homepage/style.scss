@@ -1,0 +1,181 @@
+@import "../abstracts/variables";
+@import "../abstracts/reboot";
+@import "../abstracts/mixins";
+@import "../abstracts/fonts";
+
+main#main {
+  section#slider {
+    .owl-carousel {
+      width: 100%;
+      height: 400px;
+      background-color: darken($baseBackgroundColor, 10%);
+      border-radius: 10px;
+      overflow: hidden;
+
+      * {
+        height: 100%;
+      }
+    }
+  }
+
+  section#film-section {
+    .main-content-container {
+      .movies {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+        column-gap: 20px;
+        row-gap: 50px;
+
+        .movie-item {
+          height: 300px;
+          border-radius: 10px;
+          position: relative;
+
+          &:hover {
+            .languages {
+              opacity: 1;
+            }
+          }
+
+          .languages {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            opacity: 0.5;
+            transition: opacity 0.3s ease-out;
+
+            .movie-item-language {
+              width: 40px;
+              height: 25px;
+            }
+          }
+
+          .poster-container {
+            width: 100%;
+            height: 100%;
+            flex: 0 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+
+            .movie-item-poster {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      .pagination-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .pagination-item {
+          width: 40px;
+          height: 40px;
+          margin: 0 2px;
+          font-size: 0.85rem;
+          background-color: #262435;
+          color: whitesmoke;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          user-select: none;
+          cursor: pointer;
+
+          &.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+          }
+
+          &.active {
+            background-color: #891d31;
+          }
+        }
+      }
+    }
+
+    aside.aside {
+      #tentac-robot {
+        height: auto;
+        border-radius: 10px;
+        background-color: #2d2c3f;
+
+        .tentac-control {
+          width: 100%;
+          .tentac-form-field {
+            width: 100%;
+            height: 40px;
+            background-color: #333044;
+            border-radius: 5px;
+            border: none !important;
+            outline: none !important;
+            position: relative;
+          }
+        }
+
+        .tentac-find {
+          width: 100%;
+          height: 50px;
+          background-color: #333044;
+          border-radius: 10px;
+        }
+      }
+      .ad {
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  section#series {
+    .series-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+      gap: 10px;
+
+      .serie-item {
+        height: 100px;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        user-select: none;
+        transition: transform 0.15s ease-out;
+
+        &:hover {
+          z-index: 2;
+          transform: scale(1.2);
+        }
+
+        .serie-image {
+          width: 100%;
+          height: 100%;
+          filter: brightness(70%);
+        }
+
+        .serie-texts {
+          position: absolute;
+          bottom: 3px;
+          left: 5px;
+          color: rgba(255, 255, 255, 0.8);
+          z-index: 1;
+
+          .serie-name {
+            z-index: 1;
+          }
+
+          .serie-season {
+            font-size: 0.7em;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentac</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="./styles/components/header/header.css">
+    <link rel="stylesheet" href="./styles/homepage/style.css">
+</head>
+
+<body class="mb-2">
+    <header id="header">
+        <div class="h-full flex justify-center items-center">
+            <h1 class="text-3xl font-bold header-brand mx-auto">
+                <a href="/">
+                    TENTAC
+                </a>
+            </h1>
+            <div class="search-container md:flex hidden items-center">
+                <div class="search-icon bi bi-search"></div>
+                <input type="text" placeholder="Search" id="">
+            </div>
+            <div class="profile-area rounded-full ml-auto mr-4">
+                <div class="profile">
+                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        class="profile-image object-cover object-center">
+                </div>
+                <div class="profile-dropdown flex flex-col gap-1 p-1">
+                    <div class="search-container flex md:hidden flex">
+                        <div class="search-icon bi bi-search"></div>
+                        <input type="text" placeholder="Search" id="">
+                    </div>
+                    <a href="#" class="profile-dropdown-item py-2 pl-2 text-sm rounded-md">Settings</a>
+                    <a href="/pages/watch-list/watch-list.html"
+                        class="profile-dropdown-item py-2 pl-2 text-sm rounded-md">Watch List</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="px-3">
+        <section id="slider">
+            <div class="owl-carousel my-3">
+            </div>
+        </section>
+
+        <section id="film-section">
+            <div class="main-content-container flex lg:flex-nowrap flex-wrap gap-3 relative">
+                <div class="main-content lg:w-8/12 w-full flex flex-col">
+                    <h1 class="content-title text-4xl font-bold my-5">Movies</h1>
+                    <div class="movies">
+
+                    </div>
+
+                    <div class="pagination-container mt-20 flex">
+                    </div>
+                </div>
+                <aside class="aside flex flex-col pt-20 lg:w-4/12 w-full">
+                    <div id="tentac-robot" class="flex flex-col p-3 lg:w-full w-11/12 mx-auto">
+                        <span class="text-xl font-bold text-center text-white my-2">Tentac Robot</span>
+
+                        <form action="">
+                            <div class="tentac-control">
+                                <label for="" class="text-xs text-white">Genre</label>
+                                <select name="genre" class="tentac-form-field text-sm pl-2 mt-1 text-white">
+                                    <option value="default">Genre</option>
+                                    <option value="action">Action</option>
+                                    <option value="animation">Animation</option>
+                                    <option value="sci-fi">Sci-fi</option>
+                                    <option value="fantastic">Fantastic</option>
+                                    <option value="horror">Horror</option>
+                                    <option value="comedy">Comedy</option>
+                                    <option value="adventure">Adventure</option>
+                                    <option value="crime">Crime</option>
+                                    <option value="psychology">Psychology</option>
+                                    <option value="romantic">Romantic</option>
+                                    <option value="war">War</option>
+                                    <option value="western">Western</option>
+                                    <option value="cartoon">Cartoon</option>
+                                    <option value="documentary">Documentary</option>
+                                    <option value="musical">Musical</option>
+                                    <option value="indian">Indian</option>
+                                    <option value="family">Family</option>
+                                    <option value="historical">Historical</option>
+                                    <option value="mystery">Mystery</option>
+                                </select>
+                            </div>
+
+                            <div class="tentac-control mt-4">
+                                <label for="" class="text-xs text-white">Language</label>
+                                <select name="language" class="tentac-form-field text-sm pl-2 mt-1 text-white">
+                                    <option value="default">Language</option>
+                                    <option value="aze">Azerbaijani</option>
+                                    <option value="tr">Turkish</option>
+                                    <option value="eng">English</option>
+                                </select>
+                            </div>
+
+                            <div class="tentac-control mt-4">
+                                <label for="" class="text-xs text-white">Subtitle</label>
+                                <select name="subtitle" class="tentac-form-field text-sm pl-2 mt-1 text-white">
+                                    <option value="default">None</option>
+                                    <option value="aze">Azerbaijani</option>
+                                    <option value="tr">Turkish</option>
+                                    <option value="eng">English</option>
+                                </select>
+                            </div>
+
+                            <div class="tentac-control flex mt-4 gap-3">
+                                <div class="flex flex-col w-full">
+                                    <label for="" class="text-xs text-white">IMDB From</label>
+                                    <select name="imdb-from" name="" class="tentac-form-field pl-3 mt-1 text-white">
+                                        <option value="default">none</option>
+                                        <option value="1">1+</option>
+                                        <option value="2">2+</option>
+                                        <option value="3">3+</option>
+                                        <option value="4">4+</option>
+                                        <option value="5">5+</option>
+                                        <option value="6">6+</option>
+                                        <option value="7">7+</option>
+                                        <option value="8">8+</option>
+                                        <option value="9">9+</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col w-full">
+                                    <label for="" class="text-xs text-white">IMDB To</label>
+                                    <select name="imdb-to" class="tentac-form-field pl-3 mt-1 text-white">
+                                        <option value="default">none</option>
+                                        <option value="2">
+                                            &#60;2</option>
+                                        <option value="3">
+                                            &#60;3</option>
+                                        <option value="4">
+                                            &#60;4</option>
+                                        <option value="5">
+                                            &#60;5</option>
+                                        <option value="6">
+                                            &#60;6</option>
+                                        <option value="7">
+                                            &#60;7</option>
+                                        <option value="8">
+                                            &#60;8</option>
+                                        <option value="9">
+                                            &#60;9</option>
+                                        <option value="10">
+                                            &#60;10</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="tentac-find mt-3 font-bold text-white">FIND</button>
+                        </form>
+                    </div>
+                    <div class="ad my-10">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/19d9d690603181.5e3c5d73499af.png"
+                            class="object-cover object-center">
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="series">
+            <h1 class="content-title text-4xl font-bold mb-5 mt-20">Series</h1>
+
+            <div class="series-container flex">
+
+            </div>
+            <a href="#"
+                class="w-full block text-center my-3 text-xl opacity-50 hover:opacity-100 transition-opacity">See
+                All</a>
+        </section>
+    </main>
+    <footer id="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./scripts/main.js" type="module"></script>
+</body>
+
+</html>

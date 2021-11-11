@@ -1,0 +1,167 @@
+@import "../abstracts/fonts";
+@import "../abstracts/variables";
+@import "../abstracts/reboot";
+@import "../abstracts/mixins";
+
+main#main {
+  section.info {
+    .image {
+      width: 250px;
+      height: 350px;
+      flex: 0 0 250px;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        .favorite-container {
+          transform: translateY(10px);
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .favorite-container {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        transform: translateY(-100%);
+        transition: transform 0.15s ease-out;
+        .favorite-icon {
+          cursor: pointer;
+          text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          font-size: 1.2em;
+          &.active {
+            color: #ff004c;
+          }
+        }
+      }
+    }
+    .movie-text {
+      height: 235px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .properties {
+      .property-item {
+        justify-content: center;
+        align-items: center;
+        .property-key {
+          color: #aeabc8;
+        }
+        .property-value {
+          color: #dadada;
+        }
+        &:not(:first-child) {
+          border-left: 1px solid #4b4a62;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+
+  section.video-area {
+    width: 100%;
+    iframe {
+      width: 50vw;
+      height: 40vw;
+      max-width: 600px;
+      max-height: 400px;
+      min-width: 300px;
+      min-height: 200px;
+
+      @media (max-width: 768px) {
+        width: 100% !important;
+        height: 45vw;
+      }
+    }
+  }
+
+  section.comments {
+    width: 100%;
+    height: 200px;
+
+    .message-area {
+      width: 100%;
+
+      .profile {
+        width: 60px;
+        height: 60px;
+        flex: 0 0 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .message-input {
+        width: 60%;
+        height: 100px;
+        min-height: 100px;
+        max-height: 100px;
+        margin-top: 30px;
+        padding: 10px 0 0 10px;
+        border-radius: 0 10px 10px 10px;
+        background-color: #262439;
+        border: none;
+        outline: none;
+
+        @media (max-width: 600px) {
+          width: 100%;
+        }
+      }
+    }
+
+    .comment-item {
+      .profile {
+        width: 50px;
+        height: 50px;
+        flex: 0 0 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .comment-container {
+        width: 70%;
+        height: auto;
+        background-color: #262439;
+        margin: 25px 0 0 10px;
+        padding: 10px;
+        border-radius: 0 10px 10px 10px;
+        position: relative;
+        .actions-container {
+          position: absolute;
+          bottom: -5px;
+          right: 0;
+          transform: translateY(100%);
+
+          .like-count {
+            margin: 0 10px;
+            color: #00ffa3;
+          }
+
+          .hand-icon {
+            font-size: 0.85em;
+            cursor: pointer;
+
+            &.dislike {
+              color: #ff005c;
+              opacity: 0.5;
+            }
+
+            &.like {
+              color: #00ffa3;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "../abstracts/fonts";
+@import "../abstracts/variables";
+@import "../abstracts/reboot";
+@import "../abstracts/mixins";
+
+main#main {
+  .result-item {
+    width: 100%;
+    height: 240px;
+    background-color: #242332;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+
+    .image {
+      width: 200px;
+      height: 200px;
+      flex: 0 0 200px;
+      background-color: yellow;
+      border-radius: 10px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .result-text {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (max-width: 1000px) {
+      height: auto;
+      .image {
+        width: 100%;
+        flex: 0 0 100%;
+      }
+      .texts {
+        width: 100%;
+      }
+      .result-title {
+        text-align: center;
+      }
+      .result-text {
+        text-align: center;
+      }
+    }
+  }
+}

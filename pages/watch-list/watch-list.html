@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentac</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../../styles/components/header/header.css">
+    <link rel="stylesheet" href="../../styles/watch-list/style.css">
+</head>
+
+<body class="mb-2">
+    <header id="header">
+        <div class="h-full flex justify-center items-center">
+            <h1 class="text-3xl font-bold header-brand mx-auto">
+                <a href="/">
+                    TENTAC
+                </a>
+            </h1>
+            <div class="search-container md:flex hidden items-center">
+                <div class="search-icon bi bi-search"></div>
+                <input type="text" placeholder="Search" id="">
+            </div>
+            <div class="profile-area rounded-full ml-auto mr-4">
+                <div class="profile">
+                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        class="profile-image object-cover object-center">
+                </div>
+                <div class="profile-dropdown flex flex-col gap-1 p-1">
+                    <div class="search-container flex md:hidden flex">
+                        <div class="search-icon bi bi-search"></div>
+                        <input type="text" placeholder="Search" id="">
+                    </div>
+                    <a href="#" class="profile-dropdown-item py-2 pl-2 text-sm rounded-md">Settings</a>
+                    <a href="/pages/watch-list/watch-list.html"
+                        class="profile-dropdown-item py-2 pl-2 text-sm rounded-md">Watch List</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="px-3">
+        <section class="watchlist flex flex-col">
+            <h1 class="watchlist-title text-center my-5 text-4xl uppercase font-semibold">Watchlist</h1>
+<!-- 
+            <div class="watchlist-item flex gap-5">
+                <img src="/assets/images/azerbaijan.svg" class="poster" alt="">
+                <div class="flex flex-col">
+                    <h1 class="watchlist-item-name text-3xl font-semibold"></h1>
+                    <p class="watchlist-item-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+                        error. Rem, dolor corrupti in
+                        repellendus perferendis maiores voluptate asperiores cumque quis et possimus nisi! Iste
+                        voluptatum
+                        asperiores dicta alias excepturi.m Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
+                        recusandae, in quasi earum, quo aliquid soluta nulla assumenda expedita dolore quisquam quia
+                        fugit
+                        nam culpa nisi vitae! Molestiae, et labore!</p>
+                </div> -->
+            </div>
+        </section>
+    </main>
+    <footer id="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./watch-list.js" type="module"></script>
+</body>
+
+</html>
